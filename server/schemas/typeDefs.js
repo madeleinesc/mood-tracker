@@ -5,7 +5,16 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    password: String
+    moods: [ Mood ]
   }
+
+  type Mood {
+    _id: ID
+    date: String
+    moodColor: String
+    description: String
+    }
 
   type Auth {
     token: ID!
@@ -15,11 +24,17 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(username: String!): User
+    moods(username: String): [ Mood ]
+    mood(moodId: ID!): Mood
+    me: User
   }
+
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addMood(moodColor: String!): Mood
+    addDescription(moodId: ID!, description: String!): Mood
   }
 `;
 

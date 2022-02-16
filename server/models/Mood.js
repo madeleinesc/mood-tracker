@@ -1,11 +1,12 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 
 const moodSchema = new Schema({
   date: {
-    type: String,
-    required: true,
-    unique: true,
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   moodColor: {
     type: String,
@@ -14,7 +15,8 @@ const moodSchema = new Schema({
   description: {
     type: String,
     required: true,
-    maxlength: 100,
+    minlength: 1,
+    maxlength: 280,
   },
 });
 

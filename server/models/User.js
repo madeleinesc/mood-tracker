@@ -19,6 +19,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  moods: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Mood',
+    },
+  ],
+  
 });
 
 userSchema.pre('save', async function (next) {
