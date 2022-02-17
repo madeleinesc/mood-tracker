@@ -4,12 +4,6 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find().populate('moods');
-    },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('moods');
-    },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('moods');
@@ -44,7 +38,7 @@ const resolvers = {
       return { token, user };
     },
 
-    addThought: async (parent, { moodColor, description }, context) => {
+    addMood: async (parent, { moodColor, description }, context) => {
       if (context.user) {
         const mood = await Mood.create({
           moodColor,
