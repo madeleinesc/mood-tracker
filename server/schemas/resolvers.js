@@ -5,12 +5,20 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find().populate('moods');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+      return User.findOne({ username }).populate('moods');
+    },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('moods');
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
+
+
 
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
@@ -35,6 +43,24 @@ const resolvers = {
 
       return { token, user };
     },
+
+    addThought: async (parent, { moodColor, description }, context) => {
+      if (context.user) {
+        const mood = await Mood.create({
+          moodColor,
+          description: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { moods: mood._id } }
+        );
+
+        return mood;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
   },
 };
 

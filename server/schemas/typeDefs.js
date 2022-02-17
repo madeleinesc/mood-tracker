@@ -22,10 +22,6 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
-    user(username: String!): User
-    moods(username: String): [ Mood ]
-    mood(moodId: ID!): Mood
     me: User
   }
 
