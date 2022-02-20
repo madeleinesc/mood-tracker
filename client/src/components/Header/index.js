@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
 const Header = () => {
-  const logout = (event) => {
+  /*const logout = (event) => {
     event.preventDefault();
     Auth.logout();
-  };
+  };*/
   return (
     <header className="text-dark mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
@@ -15,25 +15,7 @@ const Header = () => {
             <h1 className="display-6">Mood Tracker</h1>
           <p className="m-0">A minimalist app to track your mood.</p>
         </div>
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
-              <button className="btn btn-lg btn-dark m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="btn  btn-dark btn-info m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn  btn-dark m-2" to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
-        </div>
+       
       </div>
     </header>
   );
