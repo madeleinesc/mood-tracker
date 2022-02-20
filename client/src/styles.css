@@ -12,6 +12,11 @@ header {
     border-bottom: 1px solid black;
 }
 
+.nav {
+  border-bottom: 1px solid black;
+  padding-top: 15px;
+}
+
 .btn-cont {
     padding-top: 150px;
 }
@@ -23,6 +28,10 @@ header {
 
 .form-padding {
     padding-top: 150px;
+}
+
+.container {
+  padding-top:12px;
 }
 
 

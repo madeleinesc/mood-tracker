@@ -9,15 +9,20 @@ const Header = () => {
     Auth.logout();
   };*/
   return (
-    <header className="text-dark mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+
+
+    <header className="nav px-3">
+      <div className="nav-item">
         <div>
             <h1 className="display-6">Mood Tracker</h1>
-          <p className="m-0">A minimalist app to track your mood.</p>
+          <p>A minimalist app to track your mood.</p>
         </div>
        
       </div>
     </header>
+
+
+
   );
 };
 
