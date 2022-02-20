@@ -49,24 +49,29 @@ const Welcome = () => {
 
                 </div>
 
-                </div>
 
-                
-                <div class="text-center sign-btn">
-            <button type="button" class="btn btn-dark">Submit</button> 
-          </div>
+                <form className="desc-padding">
+                    <textarea className="px-3">Description...</textarea>
+                </form>
 
-                
-
-                
+            </div>
 
 
-
+            <div class="text-center sign-btn">
+                <button type="button" class="btn btn-dark">Submit</button>
+            </div>
 
 
 
 
-            
+
+
+
+
+
+
+
+
 
 
 
