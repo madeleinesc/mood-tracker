@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
+import Landing from './components/Landing'
 //import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
@@ -48,7 +49,9 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-           
+            <Route exact path="/">
+              <Landing />
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
@@ -56,7 +59,7 @@ function App() {
               <Signup />
             </Route>
           </div>
-          
+
         </div>
       </Router>
     </ApolloProvider>

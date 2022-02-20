@@ -1071,7 +1071,7 @@ a:hover {
 }
 
 .btn.btn-black:hover {
-  background-color: #666666;
+  background-color: black;
 }
 
 .btn.btn-link {
@@ -1080,7 +1080,7 @@ a:hover {
 }
 
 .btn.btn-link:hover {
-  background-color: #31a9e1;
+  background-color: black;
 }
 
 .card {
