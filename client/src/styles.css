@@ -24,3 +24,42 @@ header {
 .form-padding {
     padding-top: 150px;
 }
+
+
+.radioContainer{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .radioBlock {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .radioBlock:hover {
+    opacity: 80%;
+    cursor: pointer;
+  }
+  .selected {
+    border: 2px solid black;
+  }
+  .happy {
+    background-color: #dcb084;
+  }
+  .joyful {
+    background-color: #a19f89;
+  }
+  .neutral {
+    background-color: #c9dccf;
+  }
+  .angry {
+    background-color: #903729;
+  }
+  .sad {
+    background-color: #729598;
+  }
+  .depressed {
+    background-color: #4f5c62;
+  }
