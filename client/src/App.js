@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   ApolloClient,
   InMemoryCache,
@@ -7,6 +8,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+//my own css 
+import './styles.css';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
