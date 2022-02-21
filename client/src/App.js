@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
+import Moods from './pages/Moods';
 import Header from './components/Header';
 import Landing from './components/Landing'
 
@@ -62,6 +63,9 @@ function App() {
             </Route>
             <Route exact path="/welcome">
               <Welcome />
+            </Route>
+            <Route exact path="/moods">
+              <Moods />
             </Route>
           </div>
           

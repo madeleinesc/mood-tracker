@@ -42,7 +42,7 @@ const resolvers = {
       if (context.user) {
         const mood = await Mood.create({
           moodColor,
-          description: context.user.username,
+          description: description,
         });
 
         await User.findOneAndUpdate(
