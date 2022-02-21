@@ -23,3 +23,15 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+export const ADD_MOOD = gql`
+  mutation addMood($moodColor: String!, $description: String!) {
+    addMood(moodColor: $moodColor, description: $description) {
+        _id
+        date
+        moodColor
+        description
+    }
+  }
+`;
