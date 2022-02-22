@@ -6,11 +6,16 @@ import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 import { ADD_MOOD } from '../utils/mutations';
 
+import { useHistory } from 'react-router-dom';
+
 const Welcome = () => {
     const [ selectedMood, setSelectedMood ] = useState ("")
     const [ description, setDescription ] = useState ("")
 
     const [addMood, { error, data }] = useMutation(ADD_MOOD);
+
+    const history = useHistory();
+
     const handleSubmit = async () => {
         console.log(selectedMood)
         console.log(description) 
@@ -19,6 +24,7 @@ const Welcome = () => {
               variables: { moodColor:selectedMood, description },
             });
       
+            history.push('/moods');
             console.log(data)
           } catch (e) {
             console.error(e);
