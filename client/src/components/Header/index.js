@@ -24,7 +24,7 @@ const Header = () => {
 
       <div className="nav-item ms-auto">
         <Route exact path={['/moods', '/welcome']}>
-          <Link to="/moods"><p className="lead nav-links">Show Moods</p></Link>
+          <Link to="/moods"><p className="lead nav-links mood-link">Show Moods</p></Link>
           <Link onClick={() => Auth.logout()}><p className="lead nav-links">Logout</p></Link>
         </Route>
       </div>
