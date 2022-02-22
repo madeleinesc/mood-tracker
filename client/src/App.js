@@ -10,6 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 //my own css 
 import './styles.css';
+import './index.css';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';

@@ -15,7 +15,7 @@ const Header = () => {
       <div className="nav-item">
         
             <h1 className="display-6">Mood Tracker</h1>
-          <p>A minimalist app to track your mood.</p>
+          <p className="header-subtitle">A minimalist app to track your mood.</p>
         
 
         
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="nav-item ms-auto">
         <Route exact path={['/moods', '/welcome']}>
           <Link to="/moods"><p className="lead nav-links">Show Moods</p></Link>
-          <p className="lead">Logout</p>
+          <Link onClick={() => Auth.logout()}><p className="lead nav-links">Logout</p></Link>
         </Route>
       </div>
     </header>

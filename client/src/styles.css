@@ -17,9 +17,14 @@ header {
   padding-top: 15px;
 }
 
+.header-subtitle{
+  padding-bottom:5px;
+}
+
 .nav-links {
   color: black;
   text-decoration: none;
+  padding-top: 17px;
 }
 
 .nav-links:hover {
